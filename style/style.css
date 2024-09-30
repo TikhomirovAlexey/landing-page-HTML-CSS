@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #020A18;
+  color: #fff;
+  font-family: "Open Sans";
+}
+
+.center {
+  padding-left: calc(50% - 573px);
+  padding-right: calc(50% - 573px);
+}
+
+.header, .footer {
+  background-color: #09111e;
+}
+
+.header {
+  padding-block: 20px;
+}
+
+.link {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+.link::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: calc(100% - 32px);
+  background-color: #fff;
+  position: absolute;
+  left: -10%;
+  bottom: 15px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.link:hover::before {
+  left: 16px;
+  opacity: 1;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__link {
+  padding: 20px 16px;
+}/*# sourceMappingURL=style.css.map */

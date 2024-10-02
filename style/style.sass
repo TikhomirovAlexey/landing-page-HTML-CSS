@@ -5,7 +5,7 @@
 body
     background-color: $main-background
     color: $color-text
-    font-family: 'Open Sans'
+    font-family: 'Open Sans', sans-serif
 
 .center
     padding-left: calc( 50% - $site-width / 2 )
@@ -165,3 +165,39 @@ body
         margin-bottom: 20px
     &__text
         margin-top: 20px
+
+.footer
+    font-family: 'Roboto', sans-serif
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-block: 48px
+    &__subtitle
+        margin-bottom: 33px
+    &__info
+        width: 362px
+    &__list
+        display: flex
+        flex-direction: column
+        gap: 24px
+        &_links-logo
+            flex-direction: row
+            margin-top: 40px
+    &__list-item
+        display: flex
+        column-gap: 10px
+        align-items: center
+        font-size: 14px
+        font-weight: 500
+        line-height: 1.2
+    &__text
+        font-size: 14px
+        font-weight: 300
+        line-height: 1.2
+        opacity: 0.6
+        font-style: italic
+
+.subtitle
+    font-size: 16px
+    font-weight: 500

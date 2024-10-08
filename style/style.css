@@ -241,10 +241,12 @@ body {
 }
 
 .card-block {
+  margin-bottom: 244px;
+}
+.card-block__wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 362px);
+  grid-template-columns: repeat(3, minmax(300px, 362px));
   gap: 30px;
-  margin-bottom: 122px;
 }
 
 .card {
@@ -267,7 +269,7 @@ body {
 }
 
 .about-us {
-  margin-block: 122px 221px;
+  margin-bottom: 221px;
 }
 .about-us__info {
   max-width: 548px;
@@ -324,6 +326,14 @@ body {
   font-weight: 500;
 }
 
+@media (min-width: 1025px) and (max-width: 1140px) {
+  .card-block__wrapper {
+    gap: 20px;
+  }
+  .card {
+    padding: 18px;
+  }
+}
 @media (max-width: 1024px) {
   .text-preface {
     font-size: 16px;
@@ -346,6 +356,16 @@ body {
   }
   .about-product__flexbox {
     row-gap: 68px;
+  }
+  .card-block__wrapper {
+    grid-template-columns: repeat(1, minmax(300px, 362px));
+    gap: 32px;
+    justify-content: center;
+  }
+  .card_big {
+    grid-column: span 1;
+    grid-row: span 1;
+    row-gap: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -411,6 +431,9 @@ body {
   }
   .heading {
     font-size: 24px;
+  }
+  .card-block {
+    margin-bottom: 96px;
   }
 }
 @media (hover: hover) {

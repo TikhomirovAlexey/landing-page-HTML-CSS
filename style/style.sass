@@ -141,10 +141,11 @@ body
     line-height: 1.25
 
 .card-block
-    display: grid
-    grid-template-columns: repeat(3, 362px)
-    gap: 30px
-    margin-bottom: 122px
+    margin-bottom: 244px
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(3, minmax(300px, 362px))
+        gap: 30px
 
 .card
     display: flex
@@ -163,7 +164,7 @@ body
         height: 322px
 
 .about-us
-    margin-block: 122px 221px
+    margin-bottom: 221px
     &__info
         max-width: 548px
     &__heading
@@ -207,6 +208,14 @@ body
     font-size: 16px
     font-weight: 500
 
+@media (min-width: 1025px) and (max-width: 1140px)
+    .card-block
+        &__wrapper
+            gap: 20px
+
+    .card
+        padding: 18px
+
 @media (max-width: 1024px)
 
     .text-preface
@@ -230,6 +239,18 @@ body
 
     .about-product__flexbox
         row-gap: 68px
+
+    .card-block
+        &__wrapper
+            grid-template-columns: repeat(1, minmax(300px, 362px))
+            gap: 32px
+            justify-content: center
+
+    .card
+        &_big
+            grid-column: span 1
+            grid-row: span 1
+            row-gap: 30px
 
 @media (max-width: 767px)
     $padding-inline-link-nav: 8px
@@ -288,6 +309,9 @@ body
 
     .heading
         font-size: 24px
+
+    .card-block
+        margin-bottom: 96px
 
 @media (hover: hover)
     .link

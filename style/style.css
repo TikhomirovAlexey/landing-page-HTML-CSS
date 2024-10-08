@@ -367,6 +367,9 @@ body {
     grid-row: span 1;
     row-gap: 30px;
   }
+  .about-us__flexbox {
+    gap: 64px;
+  }
 }
 @media (max-width: 767px) {
   .header {
@@ -434,6 +437,21 @@ body {
   }
   .card-block {
     margin-bottom: 96px;
+  }
+  .about-us {
+    margin-bottom: 96px;
+    text-align: center;
+  }
+  .about-us__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .about-us__heading {
+    margin-bottom: 0;
+  }
+  .about-us__text {
+    margin-top: 0;
   }
 }
 @media (hover: hover) {

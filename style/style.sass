@@ -252,6 +252,10 @@ body
             grid-row: span 1
             row-gap: 30px
 
+    .about-us
+        &__flexbox
+            gap: 64px
+
 @media (max-width: 767px)
     $padding-inline-link-nav: 8px
 
@@ -312,6 +316,18 @@ body
 
     .card-block
         margin-bottom: 96px
+
+    .about-us
+        margin-bottom: 96px
+        text-align: center
+        &__info
+            display: flex
+            flex-direction: column
+            gap: 16px
+        &__heading
+            margin-bottom: 0
+        &__text
+            margin-top: 0
 
 @media (hover: hover)
     .link

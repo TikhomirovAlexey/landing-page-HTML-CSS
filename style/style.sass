@@ -173,12 +173,13 @@ body
         margin-top: 20px
 
 .footer
-    font-family: 'Roboto', sans-serif
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-    flex-wrap: wrap
     padding-block: 48px
+    font-family: 'Roboto', sans-serif
+    border-radius: 10px 10px 0 0
+    &__wrapper
+        display: flex
+        align-items: flex-start
+        gap: 30px
     &__subtitle
         margin-bottom: 33px
     &__info
@@ -256,8 +257,20 @@ body
         &__flexbox
             gap: 64px
 
+    .footer
+        &__wrapper
+            flex-wrap: wrap
+
+@media (min-width: 768px) and (max-width: 840px)
+    .footer
+        &__info
+            width: 328px
+
 @media (max-width: 767px)
     $padding-inline-link-nav: 8px
+
+    .container
+        padding-inline: $padding-inline-mobile
 
     .header
         padding-block: 10px
@@ -328,6 +341,22 @@ body
             margin-bottom: 0
         &__text
             margin-top: 0
+
+    .footer
+        padding-block: 113px 64px
+        &__wrapper
+            justify-content: center
+            gap: 32px
+        &__info
+            &_mobile-order
+                order: -1
+            &_mobile-j-content
+                display: flex
+                flex-direction: column
+                align-items: center
+
+    .subtitle
+        text-align: center
 
 @media (hover: hover)
     .link

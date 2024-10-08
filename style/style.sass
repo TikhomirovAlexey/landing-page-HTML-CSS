@@ -7,9 +7,10 @@ body
     color: $color-text
     font-family: 'Open Sans', sans-serif
 
-.center
-    padding-left: calc( 50% - $site-width / 2 )
-    padding-right: calc( 50% - $site-width / 2 )
+.container
+    max-width: calc( $site-width + $padding-inline * 2 )
+    padding-inline: $padding-inline
+    margin-inline: auto
 
 .header, .preview, .footer
     background-color: $second-background
@@ -61,7 +62,7 @@ body
     &__text
         margin-bottom: 50px
     &__img
-        max-width: 414px
+        width: min(100%, 414px)
 
 .title
     font-size: 56px
@@ -79,10 +80,14 @@ body
 .flexbox
     display: flex
     align-items: center
-    flex-wrap: wrap
     column-gap: 20px
     &_jc-sb
         justify-content: space-between
+
+.buttons-box
+    display: flex
+    align-items: center
+    column-gap: 20px
 
 .button
     display: block
@@ -92,8 +97,6 @@ body
     background: $button-background
     padding: 15px 30px
     transition: background-color 0.3s
-    &:hover
-        background-color: darken($button-background, 10%)
     &_flex
         display: flex
         align-items: center
@@ -106,6 +109,10 @@ body
     border-style: solid
     border-width: 13px 0 13px 27px
     border-color: transparent transparent transparent $color-text
+
+.logos-box
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
 
 .about-product
     margin-block: 157px 132px
@@ -200,16 +207,28 @@ body
     font-weight: 500
 
 @media (max-width: 1024px)
-    .center
-        padding-left: calc( 50% - $site-width-tablet / 2 )
-        padding-right: calc( 50% - $site-width-tablet / 2 )
+
+    .text-preface
+        font-size: 16px
+
+    .title
+        font-size: 48px
+
+    .preview
+        padding-block: 160px 120px
+
+    .flexbox
+        flex-wrap: wrap
+        row-gap: 124px
+        justify-content: center
+
+    .logos-box
+        grid-template-columns: repeat(2, 1fr)
+        gap: 32px
+        justify-items: center
 
 @media (max-width: 767px)
     $padding-inline-link-nav: 8px
-
-    .center
-        padding-left: 16px
-        padding-right: 16px
 
     .header
         padding-block: 10px
@@ -221,13 +240,50 @@ body
         &__link
             padding: 12px $padding-inline-link-nav
 
+    .text-preface
+        font-size: 14px
+
+    .title
+        font-size: 28px
+
+    .preview
+        padding-block: 64px 108px
+        &__flexbox
+            margin-bottom: 128px
+        &__info
+            text-align: center
+            width: 100%
+        &__text-preface
+            margin-bottom: 16px
+        &__title
+            margin-bottom: 64px
+        &__text
+            margin-bottom: 40px
+
+    .buttons-box
+        flex-direction: column
+        justify-content: center
+        row-gap: 24px
+
+    .logos-box
+        grid-template-columns: repeat(1, 1fr)
+        gap: 32px
+
 @media (hover: hover)
     .link
         &:hover::before
             left: $padding-inline-link-nav
             opacity: 1
 
+    .button
+        &:hover
+            background-color: darken($button-background, 10%)
+
 @media (hover: none)
     .link
         &:active
             opacity: 0.7
+
+    .button
+        &:active
+            background-color: darken($button-background, 10%)
